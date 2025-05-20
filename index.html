@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CloudSage</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Creato+Display:wght@400;700&family=Neue+Montreal:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="navbar-content">
+        <div class="logo"><img src="assets/Group 3.png" alt="logo cloudsage" height="30px"></div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <a href="#" class="cta-button">Contact us</a>
+      </div>
+    </header>
+    
+
+<main class="hero">
+  <div class="hero-background">
+    <img class="hero-circle" src="assets/Background.png" alt="Decorative circle" />
+  </div>
+
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Guiding your cloud journey to <span class="highlight" id="dynamic-word"></span><span id="cursor" class="cursor"></span>
+    </h1>
+    <p class="hero-subtitle">
+      CloudSage, an AWS Consultancy Partner, transforms your cloud investment into strategic savings. 
+      We optimize costs, drive innovation, reduce risks, and empower your business to grow sustainably – unlocking the true potential of the cloud.
+    </p>
+    <a href="#" class="btn btn-learn-more">Learn more <img src="assets/arrow.png" height="10px"></a>
+  </div>
+</main>
+
+
+
+
+    <section class="solutions" aria-labelledby="solutions-title">
+      <div class="solutions-content">
+        <h2 id="solutions-title" class="solutions-title">
+          Our <span class="highlight">solutions</span>
+        </h2>
+        <a href="#explore" class="explore-button">Explore <img src="assets/arrow.png" height="10px"></a>
+      </div>
+    
+      <div class="items-solution">
+        <article class="solution-item">
+
+          <div class="solution-text">
+            <h3 class="solution-title">Security Assessment</h3>
+            <p class="solution-description">
+              Identify vulnerabilities and misconfigurations with in-depth AWS security audits, ensuring your infrastructure is protected, compliant, and resilient.
+            </p>
+            <a href="#security-details" class="solution-link">Discover more</a>
+          </div>
+        </article>
+    
+        <article class="solution-item">
+
+          <div class="solution-text">
+            <h3 class="solution-title">DevOps Enablement</h3>
+            <p class="solution-description">
+              Accelerate your development cycles with CI/CD pipelines, automated testing, and scalable cloud-native architectures built for agility and growth.
+            </p>
+            <a href="#devops-details" class="solution-link">Discover more</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    
+
+          <!-- SCRIPT PRA SCROLL SUAVE -->
+     
+          <script src="https://unpkg.com/@studio-freight/lenis@latest/dist/lenis.min.js"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              if (window.innerWidth > 768) { 
+                  const lenis = new Lenis({
+                      duration: 1.1,
+                      smooth: true, 
+                  });
+          
+                  function raf(time) {
+                      lenis.raf(time);
+                      requestAnimationFrame(raf);
+                  }
+          
+                  requestAnimationFrame(raf);
+              }
+          });
+          </script>
+    
+          <script>
+            const hamburger = document.getElementById('hamburger');
+            const menu = document.getElementById('mobile-menu');
+    
+            hamburger.addEventListener('click', () => {
+              menu.classList.toggle('open');
+            });
+          </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
